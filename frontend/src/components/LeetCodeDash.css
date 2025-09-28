@@ -1,0 +1,74 @@
+/* src/components/LeetCodeDash.css */
+
+.lcdash{
+  --panel:#0f182b;
+  --panel-2:#101a31;
+  --text:#e8eefc;
+  --text-dim:#a9b6d3;
+  --accent:#5ea1ff;
+  --green:#22c55e;
+  --amber:#facc15;
+  --red:#ef4444;
+  --border:rgba(255,255,255,.08);
+
+  display:grid; gap: 14px; color:var(--text);
+}
+
+/* KPI row (4 chips) */
+.lcdash .kpi-row{
+  display:grid; gap:12px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 980px){
+  .lcdash .kpi-row{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .lcdash .kpi-row{ grid-template-columns: 1fr; }
+}
+.lcdash .kpi{
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.lcdash .kpi .k{ font-size:.78rem; color:var(--text-dim); margin-bottom:4px; }
+.lcdash .kpi .v{ font-weight:900; font-size:1.25rem; }
+
+/* Charts grid */
+.lcdash .charts-grid{
+  display:grid; gap:16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 980px){
+  .lcdash .charts-grid{ grid-template-columns: 1fr; }
+}
+
+/* chart card */
+.lcdash .lcd-card{
+  background: var(--panel-2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+.lcdash .chart h3{ margin:0 0 10px; font-weight:800; font-size:.95rem; letter-spacing:.2px; }
+.lcdash .chart .chart-box{ width:100%; height:260px; position:relative; }
+
+/* wide span for time-series */
+.lcdash .span-2{ grid-column: span 2; }
+@media (max-width: 980px){ .lcdash .span-2{ grid-column: span 1; } }
+
+/* donut overlay */
+.lcdash .donut-box{ position:relative; }
+.lcdash .donut-center{ position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
+.lcdash .donut-value{ font-size:1.6rem; font-weight:900; }
+.lcdash .donut-sub{ font-size:.9rem; color:var(--text-dim); margin-top:-2px; font-weight:700; }
+.lcdash .donut-caption{ text-align:center; color:var(--text-dim); font-size:.8rem; margin-top:8px; }
+
+/* Recharts helpers */
+.lcdash .pie.c0{ fill: var(--green); }
+.lcdash .pie.c1{ fill: var(--amber); }
+.lcdash .pie.c2{ fill: var(--red); }
+.lcdash .bar-primary{ fill: var(--accent); }
+.lcdash .grad1{ stop-color: var(--accent); }
+.lcdash .grad2{ stop-color: var(--accent); }

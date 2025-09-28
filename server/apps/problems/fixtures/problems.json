@@ -1,0 +1,22 @@
+[
+  {"model": "problems.problem", "pk": 1, "fields": {"title": "Two Sum", "difficulty": "EASY"}},
+  {"model": "problems.problem", "pk": 2, "fields": {"title": "Add Two Numbers", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 3, "fields": {"title": "Longest Substring Without Repeating Characters", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 4, "fields": {"title": "Median of Two Sorted Arrays", "difficulty": "HARD"}},
+  {"model": "problems.problem", "pk": 5, "fields": {"title": "Longest Palindromic Substring", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 6, "fields": {"title": "Zigzag Conversion", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 7, "fields": {"title": "Reverse Integer", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 8, "fields": {"title": "String to Integer (atoi)", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 9, "fields": {"title": "Palindrome Number", "difficulty": "EASY"}},
+  {"model": "problems.problem", "pk": 10, "fields": {"title": "Regular Expression Matching", "difficulty": "HARD"}},
+  {"model": "problems.problem", "pk": 11, "fields": {"title": "Container With Most Water", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 12, "fields": {"title": "Integer to Roman", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 13, "fields": {"title": "Roman to Integer", "difficulty": "EASY"}},
+  {"model": "problems.problem", "pk": 14, "fields": {"title": "Longest Common Prefix", "difficulty": "EASY"}},
+  {"model": "problems.problem", "pk": 15, "fields": {"title": "3Sum", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 16, "fields": {"title": "3Sum Closest", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 17, "fields": {"title": "Letter Combinations of a Phone Number", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 18, "fields": {"title": "4Sum", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 19, "fields": {"title": "Remove Nth Node From End of List", "difficulty": "MEDIUM"}},
+  {"model": "problems.problem", "pk": 20, "fields": {"title": "Valid Parentheses", "difficulty": "EASY"}}
+]

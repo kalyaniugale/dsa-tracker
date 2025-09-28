@@ -1,0 +1,17 @@
+[
+  {"model":"roadmap.track","pk":6,"fields":{"name":"Arrays & Strings","description":"Basics of arrays and strings","slug":"arrays-strings"}},
+  {"model":"roadmap.track","pk":7,"fields":{"name":"Two Pointers","description":"Pointer techniques for linear scans","slug":"two-pointers"}},
+  {"model":"roadmap.track","pk":8,"fields":{"name":"Sliding Window","description":"Window patterns for subarray problems","slug":"sliding-window"}},
+  {"model":"roadmap.track","pk":9,"fields":{"name":"Binary Search","description":"Search on sorted data and answers","slug":"binary-search"}},
+  {"model":"roadmap.track","pk":10,"fields":{"name":"Stacks & Queues","description":"LIFO/FIFO patterns and problems","slug":"stacks-queues"}},
+  {"model":"roadmap.track","pk":11,"fields":{"name":"Linked Lists","description":"List operations and cycle problems","slug":"linked-lists"}},
+  {"model":"roadmap.track","pk":12,"fields":{"name":"Trees & BST","description":"Tree traversals and BST tricks","slug":"trees-bst"}},
+  {"model":"roadmap.track","pk":13,"fields":{"name":"Graphs","description":"BFS/DFS, shortest paths, connectivity","slug":"graphs"}},
+  {"model":"roadmap.track","pk":14,"fields":{"name":"Greedy","description":"Greedy choices and proofs by exchange","slug":"greedy"}},
+  {"model":"roadmap.track","pk":15,"fields":{"name":"Dynamic Programming 101","description":"Intro DP states and transitions","slug":"dynamic-programming-101"}},
+  {"model":"roadmap.track","pk":16,"fields":{"name":"Advanced DP","description":"Knapsack, intervals, digit DP","slug":"advanced-dp"}},
+  {"model":"roadmap.track","pk":17,"fields":{"name":"Backtracking","description":"Search with pruning and recursion","slug":"backtracking"}},
+  {"model":"roadmap.track","pk":18,"fields":{"name":"Heap & Priority Queue","description":"Top-K, scheduling, streaming","slug":"heap-priority-queue"}},
+  {"model":"roadmap.track","pk":19,"fields":{"name":"Hashing & Maps","description":"Sets, maps, frequency tables","slug":"hashing-maps"}},
+  {"model":"roadmap.track","pk":20,"fields":{"name":"Bit Manipulation","description":"Bits, masks, tricks","slug":"bit-manipulation"}}
+]

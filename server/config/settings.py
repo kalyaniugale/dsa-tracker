@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "http://localhost:5174",
+
     "http://127.0.0.1:5173",
 ]
 
@@ -42,7 +45,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "api",
+    "apps.users",
+    "apps.problems",
+    "apps.roadmap",
+    "apps.leaderboard",
 ]
 
 MIDDLEWARE = [
@@ -72,7 +78,18 @@ TEMPLATES = [
         },
     },
 ]
-
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.AllowAny",  
+    ),
+    "DEFAULT_PAGINATION_CLASS":
+        "rest_framework.pagination.PageNumberPagination",
+        "PAGE_SIZE": 20,
+    
+}
 WSGI_APPLICATION = "config.wsgi.application"
 
 
@@ -104,8 +121,11 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
-
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+}
+CORS_ALLOW_ALL_ORIGINS = True
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 

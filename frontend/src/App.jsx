@@ -1,22 +1,43 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Roadmap from "./pages/Roadmap";
+import TrackDetail from "./pages/TrackDetail";
 
-function App() {
-  const [api, setApi] = useState("checking…");
-
-  useEffect(() => {
-    const url = `${import.meta.env.VITE_API_URL}/api/health`;
-    fetch(url)
-      .then(r => r.ok ? r.json() : Promise.reject())
-      .then(j => setApi(JSON.stringify(j)))
-      .catch(() => setApi("API not running"));
-  }, []);
-
+function Layout() {
   return (
-    <div style={{ padding: 20, fontFamily: "sans-serif" }}>
-      <h1>DSA Tracker — Frontend</h1>
-      <p>API status: {api}</p>
+    <div className="app-shell">
+      {/* Global header could go here */}
+      <Outlet /> {/* 👈 REQUIRED so child routes render */}
     </div>
   );
 }
 
-export default App;
+function ProtectedRoute() {
+  const token = localStorage.getItem("access");
+  return token ? <Outlet /> : <Navigate to="/login" replace />;
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          {/* Public routes */}
+          <Route path="/login" element={<Login />} />
+
+          {/* Private routes */}
+          <Route element={<ProtectedRoute />}>
+            <Route index element={<Navigate to="/roadmap" replace />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/roadmap/:id" element={<TrackDetail />} />
+          </Route>
+
+          {/* Fallback */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}

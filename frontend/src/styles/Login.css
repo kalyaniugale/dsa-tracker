@@ -1,0 +1,150 @@
+:root {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --accent: #3b82f6;
+  --success: #10b981;
+  --danger: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* center wrapper */
+/* center wrapper */
+.center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+ 
+}
+
+/* card */
+.card {
+  background: var(--card-bg);
+  padding: 50px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 800px;     /* wider block */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+/* make inputs stretch full width */
+.form input {
+  width: 100%;          /* 🔥 fill the wider card */
+  font-size: 1.05rem;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+/* make buttons also stretch */
+.form .btn {
+  width: 100%;          /* 🔥 full width button */
+  font-size: 1.05rem;
+  padding: 14px;
+}
+
+
+
+/* brand */
+.brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.tab.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+label {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0f172a;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+}
+
+/* buttons */
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+.btn.primary:hover {
+  background: #2563eb;
+}
+.btn.success {
+  background: var(--success);
+  color: white;
+}
+.btn.success:hover {
+  background: #059669;
+}
+
+/* messages */
+.msg {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--danger);
+}
+.hint {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+
