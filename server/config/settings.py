@@ -5,7 +5,9 @@ Django settings for config project (Fly.io ready).
 import os
 from pathlib import Path
 from datetime import timedelta
+
 import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,7 +17,12 @@ SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")  # will be set via fly secret
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 # During deploy keep permissive; tighten after frontend deploy
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    os.getenv("RENDER_EXTERNAL_HOSTNAME", ""),
+]
+
 
 # If you will use cookie auth from browser, add your domains here later:
 CSRF_TRUSTED_ORIGINS = [
