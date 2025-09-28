@@ -17,3 +17,8 @@ server/venv/
 .DS_Store
 .vscode/
 .idea/
+
+.venv/
+server/.venv/
+**/__pycache__/
+*.pyc
