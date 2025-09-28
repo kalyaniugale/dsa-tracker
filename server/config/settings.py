@@ -27,8 +27,8 @@ ALLOWED_HOSTS = [
 
 # If you will use cookie auth from browser, add your domains here later:
 CSRF_TRUSTED_ORIGINS = [
-    # "https://<your-frontend-domain>",
-    # "https://dsa-tracker-api.fly.dev",
+    # "https://dsa-tracker-fawn.vercel.app"
+    
 ]
 
 # Application definition
