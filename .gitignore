@@ -22,3 +22,20 @@ server/venv/
 server/.venv/
 **/__pycache__/
 *.pyc
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual envs
+.venv/
+venv/
+server/.venv/
+server/venv/
+
+# SQLite (if you don’t want it in git)
+db.sqlite3
+server/db.sqlite3
+
+# Node
+node_modules/
