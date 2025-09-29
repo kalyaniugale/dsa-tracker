@@ -55,5 +55,5 @@ export async function changePassword({ old_password, new_password }) {
 // darshan added
 import client from "./client";
 
-export const getTracks = () => client.get("roadmap/tracks/");
-export const getTrackDetail = (id) => client.get(`roadmap/tracks/${id}/`);
+export const getTracks = () => client.get("tracks/");
+export const getTrackDetail = (id) => client.get(`tracks/${id}/`);
