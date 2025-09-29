@@ -1,6 +1,5 @@
 import { authFetch, setTokens, clearTokens, BASE } from "./client.js";
 
-const BASE = import.meta.env.VITE_API_URL;
 
 export async function register({ username, email, password }) {
   const res = await fetch(`${BASE}/api/users/auth/register/`, {
