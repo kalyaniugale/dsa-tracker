@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
 # If you will use cookie auth from browser, add your domains here later:
 CSRF_TRUSTED_ORIGINS = [
     # "https://dsa-tracker-fawn.vercel.app"
-    https://dsa-tracker-fawn.vercel.app
+   "https://dsa-tracker-fawn.vercel.app",
 ]
 
 # Application definition
