@@ -20,6 +20,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "https://dsa-tracker-fawn.vercel.app",
     
     os.getenv("RENDER_EXTERNAL_HOSTNAME", ""),
 ]
@@ -28,7 +29,7 @@ ALLOWED_HOSTS = [
 # If you will use cookie auth from browser, add your domains here later:
 CSRF_TRUSTED_ORIGINS = [
     # "https://dsa-tracker-fawn.vercel.app"
-    
+    https://dsa-tracker-fawn.vercel.app
 ]
 
 # Application definition
@@ -102,7 +103,7 @@ DATABASES = {
 }
 
 # --- CORS: allow local dev; add your deployed frontend later ---
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:5174",
