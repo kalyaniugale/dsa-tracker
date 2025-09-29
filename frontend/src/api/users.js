@@ -1,4 +1,4 @@
-import { authFetch, setTokens, clearTokens } from "./client.js";
+import { authFetch, setTokens, clearTokens, BASE } from "./client.js";
 
 const BASE = import.meta.env.VITE_API_URL;
 
