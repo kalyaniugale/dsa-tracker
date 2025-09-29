@@ -1,6 +1,6 @@
 // src/api/client.js
 
-const BASE = import.meta.env.VITE_API_URL;
+export const BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
 export function getAccess()  { return localStorage.getItem("access"); }
 export function getRefresh() { return localStorage.getItem("refresh"); }
@@ -45,7 +45,7 @@ export async function authFetch(path, options = {}) {
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: `${BASE}/api/`,
+  baseURL: `${BASE}/api`,
 });
 
 export default client;
